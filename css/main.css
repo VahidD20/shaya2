@@ -1,5 +1,6 @@
 body{
     font-family: "iran_sans";
+    margin: 0;
 }
 
 @font-face {
@@ -33,6 +34,10 @@ button{
     padding: 0;
     background-color: transparent;
 }
+/* img {
+    width: 100%;
+    height: auto;
+} */
 
 :root{
     --primary_color: #ed6a00;
@@ -56,6 +61,7 @@ button{
     background-color: var(--secondary_color);
     display: flex;
     padding: 0.3rem;
+    justify-content: space-evenly;
 }
 @media screen and (min-width: 1200px) {
     .top_header{
@@ -65,12 +71,13 @@ button{
 }
 .time > time{
     color: var(--white);
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     display: block;
 }
 @media screen and (min-width: 780px) {
     .time{
         padding-right: 3rem;
+        font-size: 0.8rem;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -88,7 +95,7 @@ button{
 }
 
 .inner_list_header{
-    padding-right: 2rem;
+    padding-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -96,14 +103,15 @@ button{
 }
 .inner_list_header > li > a {
     color: var(--white);
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     display: block;
 }
 @media screen  and (min-width: 780px) {
     .inner_list_header{
         gap: 1rem;
-        justify-content: center;
-        padding-right: 22rem;
+    }
+    .inner_list_header > li > a{
+        font-size: 0.8rem;
     }
 }
 @media screen  and (min-width: 1200px) {
@@ -153,18 +161,24 @@ button{
 .logo_header > a{
     display: block;
 }
+.logo_header > a > img{
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0.2rem;
+}
 .list_header_desktop{
     display: none;
 }
 
 @media screen and (min-width: 780px) {
     .logo_header{
-        padding-left: 20rem;
+        flex: 2 200px;
     }
 }
 @media screen and (min-width: 1200px) {
     .logo_header{
-        padding-left: 0;
+        flex: 0;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -266,14 +280,15 @@ button{
 }
 
 .inner_box > div > img{
-    width: auto;
+    width: 100%;
+    height: auto;
 }
-@media screen and (min-width: 780px) {
+/* @media screen and (min-width: 780px) {
     .inner_box > div > img{
         width: 100%;
         height: auto;
     }
-}
+} */
 @media screen and (min-width: 1200px) {
     .inner_box > div > img{
         width: auto;
@@ -331,7 +346,7 @@ button{
     font-size: 0.8rem;
 }
 .global_title_o{
-    padding: 0.3rem;
+    padding: 0.2rem;
     background-color: var(--primary_color);
     width: 7rem;
     text-align: center;
@@ -363,34 +378,65 @@ button{
     background-color: var(--secondary_color);
     margin: 0;
 }
+.border{
+    border-bottom: 1px solid var(--primary_color);
+    /* display: block !important; */
+    width: 75%;
+    padding: 0 !important;
+    margin-right: 13%;
+}
+
+.top_second_item > li > a > img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.2rem;
+}
 
 .top_second_item > li{
     display: flex;
     gap: 0.5rem;
-    border-bottom: 1px solid var(--primary_color);
+    /* border-bottom: 1px solid var(--primary_color); */
     padding: 1rem 0;
+}
+.top_second_item > li:last-child{
+    border-bottom: none;
 }
 .top_second_item > li > a{
     color: var(--black);
+    flex: 200px;
 }
 @media screen and (min-width: 1200px) {
     .top_second_item > li > a{
         font-size: 0.85rem;
     }
 }
-.second_part_top{
+.titr_em{
     position: relative;
+    margin-top: 1rem;
+    
 }
-/* .second_part_top > header{
-    position: fixed;
-    top: 9rem;
-} */
+@media screen and (min-width: 1200px) {
+    .titr_em{
+        width: 55%;
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .titr_emroz{
+        margin-top: 0.3rem;
+    }
+
+}
+.titr_emroz{
+    position: absolute;
+    right: 1.5rem;
+    top: -0.8rem;
+}
+
 @media screen and (min-width: 1200px) {
     .second_part_top{
-        width: 60%;
         overflow: auto;
-        max-height: 35rem;
-        margin-top: 1rem;
+        max-height: 36rem;
     }
 }
 .sub_part_three{
@@ -398,25 +444,40 @@ button{
 }
 .sub_part_three > li{
     list-style-type: square;
-    border-bottom: 1px solid var(--primary_color);
-    padding: 1rem 0;
+    /* border-bottom: 1px solid var(--primary_color); */
+    padding-top: 1rem;
 }
 .sub_part_three > li > a{
     color: var(--black);
     font-size: 0.9rem;
 }
-.section_three{
-    position: relative;
+
+.sep{
+    background-color: var(--primary_color);
+    width: 80%;
+    display: block;
+    padding: 0.5px 0;
+    margin: 8px 0;
 }
-/* .section_three >header{
-    position: fixed;
-    top: 9rem;
-} */
+
+.havali_khabar{
+    position: relative;
+    margin-top: 1rem;
+}
+@media screen and (min-width: 1200px) {
+    .havali_khabar{
+        margin-top: 0.5rem;
+    }
+}
+.item_h_kh{
+    position: absolute;
+    top: -0.5rem;
+    right: 1.5rem;
+}
 @media screen and (min-width: 1200px) {
     .section_three{
         overflow: auto;
-        max-height: 35rem;
-        margin-top: 1rem;
+        max-height: 36rem;
         padding-right: 2rem;
     }
 }
@@ -424,10 +485,18 @@ button{
     text-align: center;
     padding-top: 2rem;
 }
+.top_adds > img{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
 @media screen and (min-width: 780px) {
     .top_adds{
         width: 60%;
         text-align: end;
+        padding: 0.5rem;
+    }
+    .top_adds > img{
         padding: 0.5rem;
     }
 }
@@ -452,6 +521,7 @@ button{
 .sub_l_a_n > a > img{
     display: block;
     width: 100%;
+    height: auto;
 }
 .sub_l_a_n{
     padding: 1rem 0;
@@ -464,10 +534,10 @@ button{
     .list_a_news{
         display: flex;
         flex-wrap: wrap;
+        gap: 1rem;
     }
     .list_a_news > li{
         flex: 200px;
-        margin-left: 1rem;
     }
 }
 
@@ -546,18 +616,26 @@ button{
 .sub_fourth > a{
     display: block;
 }
-@media screen  and (min-width: 780px) {
+.sub_fourth > a > img{
+    width: 100%;
+    height: auto;
+}
+/* @media screen  and (min-width: 780px) {
     .sub_fourth > a > img{
         width: 100%;
         height: auto;
     }
-}
-@media screen  and (min-width: 780px) {
+} */
+ .event > a >img{
+    width: 100%;
+    height: auto;
+ }
+/* @media screen  and (min-width: 780px) {
     .event > a > img{
         width: 100%;
-        height: 15rem;
+        height: auto;
     }
-}
+} */
 @media screen  and (min-width: 1200px) {
     .event {
         margin-top: 0.5rem;
@@ -642,6 +720,7 @@ button{
 }
 .img_fifth_part > div > a >img{
     width: 100%;
+    height: auto;
 }
 @media screen and (min-width: 1200px) {
     .img_fifth_part > div > a >img{
@@ -671,11 +750,8 @@ button{
     .img_fifth_part{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
-    /* .img_fifth_part > div > a > img{
-        margin-left: 0.5rem;
-    } */
 }
 .fifth_section_one{
     position: relative;
@@ -729,12 +805,15 @@ button{
     color: var(--primary_color);
     font-size: 1.2rem;
 }
+.first_img_sixth > a{
+    display: block;
+}
 .first_img_sixth > p{
     font-size: 0.8rem;
 }
 .list_sixth > li{
     display: flex;
-    padding-bottom: 1rem;
+    gap: 1rem;
 }
 @media screen and (min-width: 780px) {
     .list_sixth > li{
@@ -755,9 +834,12 @@ button{
     font-size: 0.9rem;
     color: var(--secondary_color);
 }
-
+.s_i_s > a{
+    display: block;
+}
 .s_i_s > a > img{
     width: 100%;
+    height: auto;
 }
 .s_i_s > h3 > a{
     color: var(--black);
@@ -770,6 +852,8 @@ button{
     color: var(--primary_color);
     text-align: left;
     display: block;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 @media screen and (min-width: 1200px) {
     .sixth_part{
@@ -804,6 +888,10 @@ button{
 }
 .sub_first_seven > a > img{
     width: 100%;
+    height: auto;
+}
+.sub_first_seven > a{
+    display: block;
 }
 
 .second_seven > li > a{
@@ -920,25 +1008,38 @@ button{
         padding-top: 1rem;
     }
 }
-@media screen and (min-width: 780px) {
+.container_two_eighth img{
+    width: 100%;
+    height: auto;
+}
+/* @media screen and (min-width: 780px) {
     .container_two_eighth img{
         width: 100%;
+        height: auto;
     }
-}
-@media screen and (min-width: 1200px) {
+} */
+/* @media screen and (min-width: 1200px) {
     .container_two_eighth img{
         padding-left: 0.5rem;
         width: auto;
     }
-}
+} */
 @media screen and (min-width: 1200px) {
     .eighth_part{
         display: flex;
+        align-items: center;
     }
 }
 @media screen and (min-width: 1200px) {
     .items_c_two{
         display: flex;
+        gap: 1rem;
+    }
+    .items_c_two > a{
+        flex: 2 200px;
+    }
+    .items_c_two > div{
+        flex: 1 200px;
     }
 }
 
@@ -983,12 +1084,19 @@ button{
 .ninth_part{
     padding: 1rem;
 }
-.ninth_part img{
+/* .ninth_part img{
     width: 100%;
+} */
+@media screen and (min-width: 780px) {
+    .ninth_part{
+        padding: 1rem;
+    }
 }
 @media screen and (min-width: 1200px) {
     .ninth_part{
         display: flex;
+        gap: 0.5rem;
+        padding-top: 0.5rem;
     }
 }
 .item_f_n > a{
@@ -997,19 +1105,25 @@ button{
 .item_f_n > h3 > a{
     font-size: 1rem;
 }
-@media screen and (min-width: 780px) {
+.item_f_n > a > img{
+    width: 100%;
+    height: auto;
+}
+/* @media screen and (min-width: 780px) {
     .item_f_n > a >img{
         height: auto;
     }
-}
+} */
 @media screen and (min-width: 1200px) {
     .item_f_n{
-        flex: 1 600px;
+        flex: 1 550px;
     }
 }
 .ninth_part a{
     color: var(--white);
 }
+
+
 .list_ninth_part > li > a{
     display: block;
 }
@@ -1032,15 +1146,20 @@ button{
 
 .set{
     position: absolute;
-    top: 7rem;
+    /* top: 6rem; */
     background-color: rgba(55, 55, 55, 0.6);
-    padding: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    bottom: 5%;
 }
 @media screen and (min-width: 780px) {
     .list_ninth_part {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        gap: 1rem;
+    }
+    .list_ninth_part > li{
+        flex: 1 200px;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -1048,7 +1167,23 @@ button{
         flex: 1 600px;
     }
 }
-
+@media screen and (min-width: 1200px) {
+    .list_ninth_part {
+        flex: 1 600px;
+    }
+}
+.elim_width > a{
+    position: relative;
+}
+.elim_width > a > img{
+    width: 100%;
+    height: auto;
+}
+/* @media screen and (min-width: 780px) {
+    .elim_width > a > img{
+        width: none;
+    }
+} */
 /* ##### tenth part ##### */
 .tenth_part{
     padding: 1rem;
@@ -1058,6 +1193,7 @@ button{
 }
 .tenth_part img{
     width: 100%;
+    height: auto;
 }
 
 .report{
@@ -1071,9 +1207,10 @@ button{
 
 .sub_f_c > div{
     position: absolute;
-    top: 9rem;
+    bottom: 3%;
     padding: 1rem;
     background-color: rgba(55, 55, 55, 0.6);
+    width: 100%;
 }
 .first_container_tenth{
     padding-top: 1rem;
@@ -1086,9 +1223,9 @@ button{
         display: flex;
         justify-content: space-evenly;
     }
-    .first_container_tenth img{
+    /* .first_container_tenth img{
         width: auto;
-    }
+    } */
     .first_container_tenth > li{
         margin-left: 1rem;
     }
@@ -1117,9 +1254,9 @@ button{
     .second_container_tenth > li{
         margin-right: 1rem;
     }
-    .second_container_tenth img{
+    /* .second_container_tenth img{
         width: auto;
-    }
+    } */
 }
 /* ##### eleventh part ##### */
 .pavaraghi{
@@ -1150,6 +1287,10 @@ button{
 }
 .list_eleventh img{
     width: 100%;
+    height: auto;
+}
+.list_eleventh > li > a{
+    display: block;
 }
 @media screen and (min-width: 780px) {
     .list_eleventh{
@@ -1186,6 +1327,8 @@ button{
     border: 1px solid var(--primary_color);
     text-align: center;
     margin: 1rem;
+    border-radius: 0.3rem;
+    padding: 0 0.4rem;
 }
 .list_tw > li > a{
     color: var(--black);
@@ -1246,6 +1389,7 @@ button{
 }
 .second_footer a{
     color: var(--white);
+    font-size: 0.8rem;
 }
 .second_footer span{
     color: var(--red);
@@ -1302,6 +1446,7 @@ button{
 @media screen and (min-width: 1200px) {
     .second_footer{
         flex-wrap: nowrap;
+        gap: 3rem;
     }
     .second_footer > div{
         flex: 300px;
