@@ -486,7 +486,7 @@ button{
 .sub_part_three > li{
     list-style-type: square;
     /* border-bottom: 1px solid var(--primary_color); */
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 .sub_part_three > li > a{
     color: var(--black);
