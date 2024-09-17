@@ -7,6 +7,10 @@ body{
     font-family: "iran_sans";
     src: url("../fonts/IRANSansX-Regular.woff2") format("woff");
 }
+@font-face {
+    font-family: "iran_sans_bold";
+    src: url("../fonts/IRANSans-Bold-web.woff2") format("woff");
+}
 
 * {
     box-sizing: border-box;
@@ -58,6 +62,12 @@ button{
     background-color: var(--secondary_color);
     padding: 0.3rem;
 }
+@media screen and (min-width: 1200px) {
+    .f_top_header{
+        padding: 0.1rem;
+        padding-left: 7rem;
+    }
+}
 .top_header{
     background-color: var(--secondary_color);
     display: flex;
@@ -66,7 +76,7 @@ button{
 @media screen and (min-width: 1200px) {
     .top_header{
         justify-content: end;
-        padding-left: 4rem;
+        gap: 5rem;
     }
 }
 .time > time{
@@ -82,8 +92,7 @@ button{
 }
 @media screen and (min-width: 1200px) {
     .time{
-        padding-left: 4rem;
-        justify-content: end;
+        /* justify-content: end; */
         padding-top: 0.2rem;
     }
 }
@@ -91,6 +100,7 @@ button{
 @media screen and (min-width: 1200px) {
     .list_top_header{
         display: flex;
+        gap: 3rem;
     }
 }
 
@@ -119,9 +129,9 @@ button{
         gap: 0.5rem;
         justify-content: end;
     }
-    .inner_list_header > li:last-child{
+    /* .inner_list_header > li:last-child{
         padding-left: 3rem;
-    }
+    } */
 }
 .search_desktop{
     display: none;
@@ -137,6 +147,17 @@ button{
 }
 
 /* ##### bottom header ##### */
+
+.bottom_header::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+.bottom_header::before{
+    clear: both;
+    content: "";
+    display: table;
+}
 
 .bottom_header{
     background-color: var(--primary_color);
@@ -262,17 +283,28 @@ button{
 /* ########## main body ########## */
 /* ##### first part ##### */
 
-.bottom_first_box{
-    margin-top: 2rem !important;
+.first_box{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
+@media screen and (min-width: 1200px) {
+    .first_box{
+        gap: 0.5rem;
+    }
+}
+
+/* .bottom_first_box{
+    margin-top: 2rem !important;
+} */
 .bottom_first_box > span{
     display: block;
 }
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     .bottom_first_box{
         margin-top: 1rem !important;
     }
-}
+} */
 .g_box{
     margin: 0.5rem 0.5rem;
     padding: 1rem;
@@ -280,24 +312,43 @@ button{
 }
 .first_part{
     border-bottom: 1px solid var(--primary_color);
+    padding-top: 3rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
+
 
 @media screen and (min-width: 1200px) {
     .first_part{
         display: flex;
-        padding-top: 3rem;
+        flex-direction: row;
+        gap: 0;
     }
 }
 
+.inner_box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.header_inner_box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.header_inner_box > h1 {
+    margin: 0;
+}
 .header_inner_box > h1 > a{
     color: var(--primary_color);
     font-size: 1.2rem;
     font-weight: bold;
     display: block;
 }
-.header_inner_box > p{
+.header_inner_box > span > p{
     color: #888;
     font-size: 0.9rem;
     font-weight: bold;
@@ -358,7 +409,7 @@ button{
     padding-top: 0.5rem;
 }
 .global_title_b{
-    padding: 0.2rem;
+    padding: 0.1rem;
     background-color: var(--secondary_color);
     width: 6rem;
     text-align: center;
@@ -366,10 +417,11 @@ button{
     border-radius: 0.3rem;
     margin-top: 0;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    font-family: "iran_sans_bold";
 }
 .global_title_o{
-    padding: 0.2rem;
+    padding: 0.1rem;
     background-color: var(--primary_color);
     width: 7rem;
     text-align: center;
@@ -377,12 +429,13 @@ button{
     border-radius: 0.3rem;
     margin-top: 0;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    font-family: "iran_sans_bold";
 }
 .global_title_r{
-    padding: 0.3rem;
+    padding: 0.2rem;
     background-color: var(--red);
-    width: 7rem;
+    width: 5rem;
     text-align: center;
     color: var(--white);
     border-radius: 0.3rem;
@@ -390,6 +443,7 @@ button{
     margin-bottom: 1rem;
     font-weight: bold;
     font-size: 0.8rem;
+    font-family: "iran_sans_bold";
 }
 .global_pos{
     position: absolute;
@@ -453,7 +507,7 @@ button{
 }
 .titr_em{
     position: relative;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     
 }
 @media screen and (min-width: 1200px) {
@@ -466,20 +520,20 @@ button{
 .titr_emroz{
     position: absolute;
     right: 1.5rem;
-    top: -0.8rem;
+    top: -0.4rem;
 }
 .titr_emroz > span{
     display: inline-block;
 }
 @media screen and (min-width: 1200px) {
     .titr_emroz{
-        top: -0.5rem;
+        top: -0.4rem;
     }
 }
 @media screen and (min-width: 1200px) {
     .second_part_top{
         overflow: auto;
-        max-height: 35.5rem;
+        max-height: 32.2rem;
     }
 }
 .second_part_top > span{
@@ -488,14 +542,28 @@ button{
 .sub_part_three{
     color: var(--primary_color);
     font-size: 1.3rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 .sub_part_three > li{
     list-style-type: square;
 }
 .sub_part_three > li > a{
     color: var(--black);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+}
+@media screen and (min-width: 1200px) {
+    .sub_part_three > li > a{
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+}
+.more_items > span{
+    display: block;
 }
 
 .sep{
@@ -509,7 +577,7 @@ button{
 
 .havali_khabar{
     position: relative;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 @media screen and (min-width: 1200px) {
     .havali_khabar{
@@ -518,7 +586,7 @@ button{
 }
 .item_h_kh{
     position: absolute;
-    top: -0.8rem;
+    top: -0.4rem;
     right: 1.5rem;
 }
 @media screen and (min-width: 1200px) {
@@ -527,7 +595,7 @@ button{
     }
 }
 .section_three{
-    padding-right: 2rem;
+    padding-right: 1rem;
 }
 .section_three > span{
     display: block;
@@ -535,8 +603,8 @@ button{
 @media screen and (min-width: 1200px) {
     .section_three{
         overflow: auto;
-        max-height: 35.5rem;
-        padding-right: 2rem;
+        max-height: 32.2rem;
+        padding-right: 1rem;
     }
 }
 .top_adds{
@@ -594,7 +662,6 @@ button{
 }
 @media screen and (min-width: 780px) {
     .list_a_news{
-        display: flex;
         flex-direction: row;
     }
     .list_a_news > li{
@@ -612,23 +679,38 @@ button{
     display: flex;
     gap: 0.5rem;
     position: absolute;
-    top: -1.4rem;
+    top: -1rem;
+}
+.sub_third_part > h2:not(:first-child) > a{
+    width: 4rem;
 }
 .sub_third_part > h2 > a{
-    padding: 0.3rem 0.7rem;
+    display: block;
 }
+ 
 .list_third_part{
     padding: 1rem;
-    list-style-type: square;
+    padding-top: 0;
+    /* list-style-type: square; */
     color: var(--primary_color);
-
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
 }
+
+
 .list_third_part > li{
     border-bottom: 1px solid var(--border_color);
     padding: 0.3rem 0;
 }
+.list_third_part > li:last-child{
+    border-bottom: none;
+}
 .list_third_part > li > a{
     color: var(--black);
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 1200px) {
@@ -641,17 +723,19 @@ button{
     }
     .list_third_part > li{
         flex: 400px;
+        display: flex;
+        gap: 0.5rem;
     }
-}
-@media screen and (min-width: 1200px) {
     .list_third_part > li > a{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        font-weight: normal;
     }
 }
 
+
 /* ##### fourth part ##### */
 .border_lines{
-    border-bottom: 1px solid var(--primary_color);
+    border-top: 1px solid var(--primary_color);
     margin-top: 1.5rem;
 }
 .list_sub_fourth > li{
@@ -693,7 +777,7 @@ button{
     width: 100%;
     height: auto;
     display: block;
-    aspect-ratio: 310/250;
+    aspect-ratio: 370/360;
     object-fit: cover;
     margin-top: 0.5rem;
  }
@@ -701,7 +785,7 @@ button{
 @media screen  and (min-width: 1200px) {
     .event {
         margin-top: 0.5rem;
-        flex: 1 170px;
+        flex: 1 10.26rem;
     }
 }
 .container_fourth{
@@ -726,7 +810,7 @@ button{
     }
     .sub_fourth{
         padding-top: 2rem;
-        flex: 2 400px;
+        flex: 2 25rem;
         gap: 0.5rem;
     }
 
@@ -747,7 +831,7 @@ button{
     .list_sub_fourth{
         display: flex;
         flex-wrap: wrap;
-        flex: 2 200px;
+        flex: 2 12.5px;
         gap: 1rem;
     }
 }
@@ -990,18 +1074,26 @@ button{
 /* ##### seventh ##### */
 
 .first_seven{
-    border-bottom: 1px solid var(--primary_color);
-    padding-bottom: 1rem;
+    /* border-bottom: 1px solid var(--primary_color); */
+    /* padding-bottom: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 @media screen and (min-width: 780px) {
     .first_seven{
-        display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+        flex-direction: row;
     }
-    .first_seven{
+    /* .first_seven{
         border-bottom: none;
-    }
+    } */
+}
+.sub_first_seven{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 @media screen and (min-width: 780px) {
     .sub_first_seven{
@@ -1028,16 +1120,28 @@ button{
 }
 .second_seven{
     color: var(--primary_color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* padding: 0 1rem; */
+
 }
 .second_seven > li{
     border-bottom: 1px solid var(--primary_color);
-    list-style-type: square;
-    padding: 0.5rem 0;
+    /* list-style-type: square; */
+    /* padding: 0.5rem 0; */
 }
-@media screen and (min-width: 780px) {
+.second_seven > li:last-child{
+    border-bottom: none;
+}
+/* @media screen and (min-width: 780px) {
     .second_seven{
         padding: 0 1.5rem;
     }
+} */
+.more_items_second{
+    display: block;
+    padding-top: 0.5rem;
 }
 .set_seven{
     margin-top: 2rem;
@@ -1045,22 +1149,25 @@ button{
 .seventh_part{
     position: relative;
     padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     
 }
 .header_seventh{
     position: absolute;
     top: -2rem;
-    width: 6%;
+    width: 10%;
 }
 @media screen and (min-width: 1200px) {
     .seventh_part{
-        display: flex;
-        gap: 1rem;
+        gap: 3rem;
+        flex-direction: row;
     }
 }
 @media screen and (min-width: 1200px) {
     .global_seventh{
-        flex: 200px;
+        flex: 12.5rem;
         font-size: 1.2rem;
     }
 }
