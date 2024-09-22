@@ -647,7 +647,7 @@ button{
 .list_a_news{
     padding: 1rem 0;
 }
-.list_a_news > li > span >a{
+.list_a_news > li > div >a{
     color: var(--secondary_color);
     font-size: 0.9rem;
     font-weight: bold;
