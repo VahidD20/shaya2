@@ -34,6 +34,9 @@ h2{
 h3{
     margin: 0;
 }
+h4{
+    margin: 0;
+}
 p{
     margin: 0;
 }
@@ -328,7 +331,6 @@ button{
 
 @media screen and (min-width: 1200px) {
     .first_part{
-        display: flex;
         flex-direction: row;
         gap: 1rem;
     }
@@ -337,7 +339,7 @@ button{
 .inner_box{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 .header_inner_box{
     display: flex;
@@ -351,7 +353,7 @@ button{
     font-weight: bold;
     display: block;
 }
-.header_inner_box > span > p{
+.header_inner_box > p{
     color: #888;
     font-size: 0.9rem;
     font-weight: bold;
@@ -379,13 +381,15 @@ button{
     font-weight: bold;
 }
 .sub_bottom > li{
-    list-style-type: square;
+    /* list-style-type: square; */
+    display: flex;
+    gap: 1rem;
 }
-.sub_bottom{
+/* .sub_bottom{
     color: var(--primary_color);
     padding: 0 1.5rem;
     font-size: 1.4rem;
-}
+} */
 @media screen and (min-width: 1200px) {
     .sub_bottom{
         display: flex;
@@ -398,6 +402,9 @@ button{
     font-size: 0.9rem;
     /* display: block;
     text-align: left; */
+}
+.g_item_blue{
+    color: var(--secondary_color) !important; 
 }
 .set_g_item{
     display: flex;
@@ -508,11 +515,11 @@ button{
     font-size: 0.8rem;
     font-weight: bold;
 }
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     .top_second_item{
         font-size: 0.85rem;
     }
-}
+} */
 .titr_em{
     position: relative;
     /* margin-top: 2rem; */
@@ -556,32 +563,39 @@ button{
     gap: 1rem;
 }
 .sub_part_three > li{
-    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.sub_part_three > li > a{
+.sub_part_three > li > div:first-child{
+    display: flex;
+    gap: 0.5rem;
+    /* padding-bottom: 1rem; */
+}
+.sub_part_three > li > div > a{
     color: var(--black);
     font-size: 1rem;
     display: block;
     font-weight: bold;
 }
 @media screen and (min-width: 1200px) {
-    .sub_part_three > li > a{
+    .sub_part_three > li > div > a{
         font-weight: normal;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 }
 /* .more_items > span{
     display: block;
 } */
 
-.sep{
+/* .sep{
     background-color: var(--border_color);
     width: 90%;
     display: block;
     padding: 0.5px 0;
     margin: 8px 0;
     margin-right: 4%;
-}
+} */
 
 .havali_khabar{
     position: relative;
@@ -612,7 +626,7 @@ button{
     .section_three{
         overflow: auto;
         max-height: 32.2rem;
-        padding-right: 1rem;
+        padding-right: 0;
     }
 }
 .top_adds{
@@ -726,15 +740,13 @@ button{
 
 @media screen and (min-width: 1200px) {
     .list_third_part {
-        display: flex;
         flex-flow: row wrap;
         gap: 0 2rem;
         font-size: 1.2rem;
 
     }
     .list_third_part > li{
-        flex: 400px;
-        display: flex;
+        flex: 45%;
         gap: 0.5rem;
         padding: 0.3rem 0;
     }
@@ -822,7 +834,7 @@ button{
     }
     .sub_fourth{
         padding-top: 2rem;
-        flex: 2 25rem;
+        flex: 2 33%;
         gap: 0.5rem;
     }
 
@@ -961,7 +973,7 @@ button{
 }
 @media screen and (min-width: 1200px) {
     .fifth_section_tow{
-        flex: 170px;
+        flex: 15%;
     }
 }
 
@@ -1024,7 +1036,7 @@ button{
 }
 .list_sixth > li > h3{
     margin: 0;
-    flex: 1 500px;
+    flex: 130%;
 }
 .list_sixth > li > h3 > a{
     font-size: 0.9rem;
@@ -1052,16 +1064,14 @@ button{
 }
 @media screen and (min-width: 780px) {
     .s_i_s{
-        flex: 250px;        
+        flex: 35%;        
     }
 }
-
-
-@media screen and (min-width: 780px) {
+/* @media screen and (min-width: 780px) {
     .s_i_s{
         flex: 150px;        
     }
-}
+} */
 .third_img_sixth > span{
     color: var(--primary_color);
     text-align: left;
@@ -1083,7 +1093,7 @@ button{
 }
 @media screen and (min-width: 1200px) {
     .sixth_s{
-        flex: 1 250px;
+        flex: 30%;
     }
 }
 .second_img_sixth{
@@ -1103,7 +1113,7 @@ button{
 }
 @media screen and (min-width: 1200px) {
     .second_img_sixth{
-        flex: 2 300px;
+        flex: 35%;
         max-height: 40rem;
     }
     .set_width{
@@ -1140,7 +1150,7 @@ button{
 }
 @media screen and (min-width: 780px) {
     .sub_first_seven{
-        flex: 200px;
+        flex: 25%;
     }
 }
 .sub_first_seven > h3 > a{
@@ -1277,7 +1287,7 @@ button{
 @media screen and (min-width: 1200px) {
     .container_one_eighth{
         /* display: block; */
-        flex: 1 390px;
+        flex: 1 35%;
         padding-bottom: 0;
         /* flex-direction: column; */
         /* padding-left: 0.5rem; */
@@ -1360,10 +1370,10 @@ button{
         gap: 1rem;
     }
     .items_c_two > a{
-        flex: 2 200px;
+        flex: 2 25%;
     }
     .items_c_two > div{
-        flex: 1 200px;
+        flex: 1 25%;
     }
 }
 .sub_c_eighth{
@@ -1381,6 +1391,7 @@ button{
 .ninth_section{
     background-color: var(--black);
     margin-top: 2rem;
+    padding-bottom: 1rem;
 }
 .sub_ninth_header {
     background-color: var(--black);
@@ -1444,7 +1455,7 @@ button{
 
 @media screen and (min-width: 1200px) {
     .item_f_n{
-        flex: 1 550px;
+        flex: 1 50%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -1654,7 +1665,7 @@ button{
         flex-direction: row;
     }
     .list_eleventh > li{
-        flex:1 350px;
+        flex:1 20%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -1698,7 +1709,7 @@ button{
     } 
     .list_tw{
         display: flex;
-        flex: 70%;
+        flex: 1;
         gap: 1rem;
     }
     /* .list_tw > li{
@@ -1743,18 +1754,30 @@ button{
 
 .set_s_b{
     background-color: #1d1f27;
+    padding: 0.3rem;
 }
 .second_footer > div{
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 @media screen and (min-width: 780px) {
     .second_footer > div{
         padding: 0;
         flex: 25%;
+        align-items: normal;
+        /* gap: 1rem; */
     }
 }
 .second_footer{
     padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* align-items: center; */
 }
 /* @media screen and (min-width: 1200px) {
     .second_footer{
@@ -1779,12 +1802,11 @@ button{
 }
 .second_footer h4 {
     color: var(--white);
-    margin: 0;
 }
 
 @media screen and (min-width: 780px) {
     .second_footer{
-        display: flex;
+        flex-direction: row;
         gap: 1rem;
     }
 }
@@ -1797,37 +1819,40 @@ button{
         border-bottom: none;
     }
 }
-@media screen and (min-width: 1200px){
+/* @media screen and (min-width: 1200px){
     .s_f{
         width: 30%;
     }
-}
+} */
 .sub_second_f > li{
     border-bottom: none !important;
+    display: flex;
+}
+.sub_second_f > li > span > svg{
+    display: block;
 }
 .sub_second_f{
     border-bottom: 3px dotted #555;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 780px) {
     .sub_second_f{
-        display: flex;
-        /* flex-wrap: wrap;  */
+        flex-direction: row;
+        justify-content: space-between;
     }
-    .sub_second_f > li{
+    /* .sub_second_f > li{
         flex: 1 160px;
-    }
-    .sub_second_f{
-        padding: 0;
-    }
+    } */
 }
-@media screen and (min-width: 1200px){
+/* @media screen and (min-width: 1200px){
     .sub_second_f > li {
         flex: 100px;
     }
 
-}
+} */
 @media screen and (min-width: 1200px) {
     .second_footer{
         gap: 3rem;
@@ -1836,13 +1861,22 @@ button{
 
 /* ##### third footer ##### */
 
+.top_third_f{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.top_third_f > a > svg{
+    display: block;
+}
 .set_th_b{
     background-color: #2e3037;
 }
 
-.third_footer > div{
+/* .third_footer > div{
     text-align: center;
-}
+} */
 .center_third_f > p{
     color: var(--white);
     font-size: 0.8rem;
@@ -1851,14 +1885,20 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 .bottom_third_f > a >p{
     font-size: 0.8rem;
     color: var(--white);
 }
+.third_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media screen and (min-width: 1200px) {
     .third_footer{
-        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
