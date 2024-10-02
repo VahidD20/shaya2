@@ -321,11 +321,11 @@ button{
     box-shadow: 0 0 7px 0 rgba(215,60,0,0.26);
 }
 .first_part{
-    border-bottom: 1px solid var(--primary_color);
+    /* border-bottom: 1px solid var(--primary_color); */
     /* padding-top: 3rem; */
     /* padding-bottom: 1rem; */
     padding: 3rem 0.5rem 1rem 0.5rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -673,14 +673,16 @@ button{
 /* ##### second part ##### */
 
 .second_part{
-    padding: 0 0.5rem;
+    padding: 1rem 0;
+    margin: 0 0.5rem;
     border-bottom: 1px solid var(--primary_color);
+    border-top: 1px solid var(--primary_color);
 }
 /* .list_a_news > li > a:first-child{
     display: block;
 } */
 .list_a_news{
-    padding: 1rem 0;
+    padding-top: 1rem;
 }
 .sub_l_a_n a{
     color: var(--secondary_color);
@@ -785,7 +787,8 @@ button{
 /* ##### fourth part ##### */
 .border_lines{
     border-top: 1px solid var(--primary_color);
-    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--primary_color);
+    margin: 1.5rem 0.5rem 0;
 }
 .list_sub_fourth li{
     padding: 1rem 0;
@@ -808,7 +811,7 @@ button{
     border: 2px solid var(--red);
     position: relative;
 }
-.event span{
+.event > span{
     position: absolute;
     top: -1rem;
 }
@@ -848,9 +851,9 @@ button{
 }
 .container_fourth{
     /* padding-top: 1rem; */
-    border-bottom: 1px solid var(--primary_color);
+    /* border-bottom: 1px solid var(--primary_color); */
     /* padding-bottom: 1rem; */
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -878,17 +881,14 @@ button{
     }
 
 }
-.number{
+/* .number{
     align-self: baseline;
-}
-.number span{
-    padding: 0.1rem;
+} */
+.number{
+    padding: 0.1rem 0.5rem;
     background-color: var(--secondary_color);
     color: var(--white);
-    display: inline-block;
     border-radius: 0.5rem;
-    width: 1.5rem;
-    text-align: center;
 }
 @media screen  and (min-width: 1200px) {
     .list_sub_fourth{
@@ -922,6 +922,12 @@ button{
 
 /* ##### fifth part ##### */
 
+.set_border{
+    border-bottom: 1px solid var(--primary_color);
+    margin: 0.5rem;
+    padding-bottom: 2rem;
+}
+
 .list_fifth li a{
     color: var(--black);
     font-size: 0.9rem;
@@ -952,11 +958,17 @@ button{
     display: block;
     color: var(--secondary_color);
     font-weight: bold;
+    font-size: 1.1rem;
 }
 .img_fifth_part img{
     width: 100%;
     height: auto;
     display: block;
+}
+.sub_img_fifth{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 /* @media screen and (min-width: 1200px) {
     .img_fifth_part > div > a >img{
@@ -1010,13 +1022,13 @@ button{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 2rem 0.5rem;
+    /* margin: 2rem 0.5rem; */
 }
 @media screen and (min-width: 1200px) {
     .fifth_part{
         flex-direction: row;
         gap: 1rem;
-        margin-top: 2rem;
+        margin: 2rem 0.5rem;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -1164,7 +1176,7 @@ button{
     }
 }
 .set_width{
-    margin: 2rem 0.5rem;
+    margin: 2rem 0;
 }
 @media screen and (min-width: 1200px) {
     .second_img_sixth{
@@ -1310,7 +1322,7 @@ button{
 } */
 
 .set_eight{
-    margin: 2rem 0.5rem;
+    margin: 2rem 0;
 }
 .eighth_part{
     position: relative;
@@ -1628,9 +1640,12 @@ button{
     padding: 1rem;
     background-color: rgba(55, 55, 55, 0.6);
     width: 100%;
+    min-height: 5rem;
 }
-.set_pos > h3{
+.set_pos span{
     color: var(--white);
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 /* .first_container_tenth{
