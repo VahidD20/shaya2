@@ -881,7 +881,7 @@ button{
 .fifth_part{
     margin-top: 1.5rem;
 }
-.img_fifth_part > div > a{
+.img_fifth_part div a{
     display: block;
     color: var(--secondary_color);
     font-weight: bold;
@@ -897,7 +897,9 @@ button{
     flex-direction: column;
     gap: 0.5rem;
 }
-
+.sub_img_fifth a:last-child{
+    align-self: flex-start;
+}
 .list_img_fifth li{
     border-bottom: 1px solid var(--primary_color);
     padding: 1rem 0;
@@ -916,6 +918,7 @@ button{
     border-radius: 0.5rem;
     width: 1.5rem;
     text-align: center;
+    flex-shrink: 0;
 }
 .list_img_fifth li a{
     color: var(--black);
@@ -991,6 +994,7 @@ button{
 .first_img_sixth h2 a{
     color: var(--primary_color);
     font-size: 1.1rem;
+    display: block;
 }
 .first_img_sixth > a{
     display: block;
@@ -1008,6 +1012,11 @@ button{
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+@media screen and (min-width: 1200px) {
+    list_sixth{
+        margin-bottom: 0;
+    }
 }
 .list_sixth li{
     display: flex;
@@ -1034,6 +1043,7 @@ button{
     font-size: 0.85rem;
     font-weight: bold;
     color: var(--secondary_color);
+    display: block;
 }
 .s_i_s{
     display: flex;
@@ -1051,6 +1061,7 @@ button{
 .s_i_s h3 a{
     color: var(--black);
     font-size: 0.9rem;
+    display: block;
 }
 .s_i_s p{
     font-size: 0.8rem;
@@ -1139,9 +1150,9 @@ button{
     height: auto;
     display: block;
 }
-.sub_first_seven > a{
+/* .sub_first_seven > a{
     display: block;
-}
+} */
 
 .second_seven li a{
     color: var(--black);
@@ -1154,7 +1165,10 @@ button{
 }
 .second_seven li{
     border-bottom: 1px solid #adbcca;
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 .second_seven > li:first-child{
     padding-top: 0;
@@ -1204,9 +1218,9 @@ button{
     flex-direction: column;
     gap: 0.5rem;
 }
-.sub_container_one > a {
+/* .sub_container_one a {
     display: block;
-}
+} */
 .sub_container_one a img{
     width: 100%;
     height: auto;
@@ -1234,9 +1248,12 @@ button{
     gap: 2rem;
     padding-bottom: 2rem;
 }
-.container_one_eighth h3 a{
+.container_one_eighth a{
     color: var(--black);
     display: block;
+}
+.container_one_eighth a:last-child{
+    align-self: flex-start;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1277,25 +1294,36 @@ button{
     .linear img {
         width: 100%;
     }
+    .linear li a:first-child{
+        flex: 1 45%;
+    }
+    .linear li a:last-child{
+        flex: 1 55%;
+    }
 }
 .container_two_eighth{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.container_two_eighth h3 > a{
+.container_two_eighth a{
     color: var(--secondary_color);
     display: block;
+}
+.container_two_eighth h3{
+    align-self: flex-start;
 }
 .container_two_eighth p {
     font-size: 0.8rem;    
 }
 .container_two_eighth > div:last-child{
     border-top: 1px solid var(--primary_color);
+    padding-top: 1rem;
 }
 @media screen and (min-width: 780px) {
     .container_two_eighth > div:last-child{
         border-top: none;
+        padding-top: 0;
     }
 }
 .container_two_eighth img{
@@ -1310,9 +1338,14 @@ button{
         gap: 1rem;
     }
 }
+.items_c_two{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 @media screen and (min-width: 1200px) {
     .items_c_two{
-        display: flex;
+        flex-direction: row;
         gap: 1rem;
     }
     .items_c_two > a{
@@ -1327,7 +1360,9 @@ button{
     flex-direction: column;
     gap: 1rem;
 }
-
+.sub_c_eighth a{
+    align-self: flex-start;
+}
 /* ##### ninth part ##### */
 
 .second_wrapper{
@@ -1373,16 +1408,25 @@ button{
 }
 .ninth_part{
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
     .ninth_part{
-        display: flex;
+        /* display: flex; */
+        flex-direction: row;
         gap: 2rem;
         padding-top: 0.5rem;
         padding-bottom: 0;
         align-items: flex-start;
     }
+}
+.item_f_n{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .item_f_n > a{
     display: block;
@@ -1399,8 +1443,6 @@ button{
 @media screen and (min-width: 1200px) {
     .item_f_n{
         flex: 1 50%;
-        display: flex;
-        flex-direction: column;
         gap: 1rem;
     }
 }
@@ -1439,6 +1481,7 @@ button{
     bottom: 0;
     width: 100%;
 }
+
 @media screen and (min-width: 780px) {
     .list_ninth_part {
         flex-direction: row;
@@ -1535,9 +1578,10 @@ button{
     flex-direction: column;
     gap: 1rem;
 }
-.sub_f_t h3 a{
+.sub_f_t a{
     color: var(--secondary_color);
     font-size: 1rem;
+    align-self: flex-start;
 }
 
 .sub_f_t p{
