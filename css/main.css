@@ -991,14 +991,17 @@ button{
     flex-direction: column;
     gap: 1rem;
 }
-.first_img_sixth h2 a{
+.first_img_sixth a{
     color: var(--primary_color);
     font-size: 1.1rem;
     display: block;
 }
-.first_img_sixth > a{
-    display: block;
+.orgnize{
+    align-self: flex-start;
 }
+/* .first_img_sixth > a{
+    display: block;
+} */
 .first_img_sixth p{
     font-size: 0.8rem;
 }
@@ -1029,40 +1032,39 @@ button{
     border-radius: 0.2rem;
 }
 
-.list_sixth > li > a{
+.list_sixth li a:first-child{
     display: block;
     color: var(--secondary_color);
-    font-size: 0.9rem;
     flex: 35%;
 }
-.list_sixth li h3{
+.list_sixth li a:last-child{
     margin: 0;
     flex: 65%;
-}
-.list_sixth li h3 a{
     font-size: 0.85rem;
     font-weight: bold;
     color: var(--secondary_color);
-    display: block;
+    align-self: flex-start;
 }
+
 .s_i_s{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-.s_i_s > a{
+/* .s_i_s > a{
     display: block;
-}
+} */
 .s_i_s a img{
     width: 100%;
     height: auto;
     display: block;
 }
-.s_i_s h3 a{
+.s_i_s a{
     color: var(--black);
     font-size: 0.9rem;
     display: block;
 }
+
 .s_i_s p{
     font-size: 0.8rem;
 }
@@ -1140,10 +1142,12 @@ button{
         flex: 25%;
     }
 }
-.sub_first_seven h3 a{
+.sub_first_seven a:last-child{
     font-size: 0.9rem;
+    font-weight: bold;
     color: var(--secondary_color);
     display: block;
+    align-self: flex-start;
 }
 .sub_first_seven a img{
     width: 100%;
@@ -1218,9 +1222,9 @@ button{
     flex-direction: column;
     gap: 0.5rem;
 }
-/* .sub_container_one a {
-    display: block;
-} */
+.sub_container_one a {
+    font-weight: bold;
+}
 .sub_container_one a img{
     width: 100%;
     height: auto;
@@ -1309,6 +1313,7 @@ button{
 .container_two_eighth a{
     color: var(--secondary_color);
     display: block;
+    font-weight: bold;
 }
 .container_two_eighth h3{
     align-self: flex-start;
@@ -1431,7 +1436,7 @@ button{
 .item_f_n > a{
     display: block;
 }
-.item_f_n h3 a{
+.item_f_n span a{
     font-size: 1rem;
 }
 .item_f_n a img{
@@ -1457,10 +1462,12 @@ button{
 .list_ninth_part a{
     font-size: 1rem;
 }
-.item_f_n > h3{
+.item_f_n span{
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-.list_ninth_part span{
+.list_ninth_part svg{
     display: block;
     position: absolute;
     top: -1rem;
@@ -1558,8 +1565,9 @@ button{
     gap: 1rem;
     padding-top: 0.5rem;
 }
-.first_container_tenth > li > a{
+.first_container_tenth > li a{
     display: block;
+    font-weight: bold;
 }
 .first_container_tenth{
     display: flex;
@@ -1582,6 +1590,7 @@ button{
     color: var(--secondary_color);
     font-size: 1rem;
     align-self: flex-start;
+    font-weight: bold;
 }
 
 .sub_f_t p{
@@ -1589,7 +1598,9 @@ button{
     color: var(--black);
     font-size: 0.8rem;
 }
-
+.first_container_tenth a{
+    font-weight: bold;
+}
 .second_container_tenth{
     border-top: 1px solid var(--primary_color);
     display: flex;
@@ -1632,28 +1643,32 @@ button{
     flex-direction: column;
     gap: 1rem;
 }
-.list_eleventh h3 > a{
+.list_eleventh li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.list_eleventh a:last-child{
     color: var(--white);
     font-size: 1rem;
     display: block;
+    align-self: flex-start;
 }
 .list_eleventh img{
     width: 100%;
     height: auto;
     display: block;
 }
-.list_eleventh > li > a{
+.list_eleventh li a:first-child{
     display: block;
 }
 @media screen and (min-width: 780px) {
     .list_eleventh{
         flex-direction: row;
     }
-    .list_eleventh > li{
+    .list_eleventh li{
         flex:1 20%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -1795,7 +1810,7 @@ button{
     border-bottom: none !important;
     display: flex;
 }
-.sub_second_f > li > span > svg{
+.sub_second_f li svg{
     display: block;
 }
 .sub_second_f{
