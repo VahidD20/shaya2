@@ -1356,8 +1356,9 @@ button{
     .items_c_two > a{
         flex: 2 25%;
     }
-    .items_c_two > div{
+    .items_c_two div{
         flex: 1 25%;
+        align-self: flex-start;
     }
 }
 .sub_c_eighth{
@@ -1585,6 +1586,7 @@ button{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-self: flex-start;
 }
 .sub_f_t a{
     color: var(--secondary_color);
