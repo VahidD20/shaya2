@@ -323,11 +323,14 @@ button{
     gap: 1rem;
 }
 
-.header_inner_box > h1 > a{
+.header_inner_box h1 a{
     color: var(--primary_color);
     font-size: 1.2rem;
     font-weight: bold;
     display: block;
+}
+.header_inner_box h1{
+    align-self: flex-start;
 }
 .header_inner_box > p{
     color: #888;
@@ -752,6 +755,13 @@ button{
     left: 0;
     background-color: #404040d4;
 }
+.left_event_eleven{
+    position: absolute;
+    top: 35%;
+    padding: 0.1rem 0.4rem;
+    left: 3.25rem;
+    background-color: #404040d4;
+}
 .repart_sub_fourth{
     position: relative;
 }
@@ -877,6 +887,7 @@ button{
     border-radius: 0.3rem;
     width: 1.5rem;
     text-align: center;
+    flex-shrink: 0;
 }
 .fifth_part{
     margin-top: 1.5rem;
@@ -994,7 +1005,6 @@ button{
 .first_img_sixth a{
     color: var(--primary_color);
     font-size: 1.1rem;
-    display: block;
 }
 .orgnize{
     align-self: flex-start;
@@ -1051,9 +1061,7 @@ button{
     flex-direction: column;
     gap: 0.5rem;
 }
-/* .s_i_s > a{
-    display: block;
-} */
+
 .s_i_s a img{
     width: 100%;
     height: auto;
@@ -1062,7 +1070,6 @@ button{
 .s_i_s a{
     color: var(--black);
     font-size: 0.9rem;
-    display: block;
 }
 
 .s_i_s p{
@@ -1070,7 +1077,8 @@ button{
 }
 @media screen and (min-width: 780px) {
     .s_i_s{
-        flex: 35%;        
+        flex: 35%; 
+        align-self: flex-start;       
     }
 }
 
@@ -1108,7 +1116,7 @@ button{
 @media screen and (min-width: 1200px) {
     .second_img_sixth{
         flex: 35%;
-        /* max-height: 40rem; */
+        align-self: flex-start;
     }
     .set_width{
         width: 50rem;
@@ -1128,7 +1136,6 @@ button{
 @media screen and (min-width: 780px) {
     .first_seven{
         flex-wrap: wrap;
-        gap: 1rem;
         flex-direction: row;
     }
 }
@@ -1146,7 +1153,6 @@ button{
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--secondary_color);
-    display: block;
     align-self: flex-start;
 }
 .sub_first_seven a img{
@@ -1154,9 +1160,6 @@ button{
     height: auto;
     display: block;
 }
-/* .sub_first_seven > a{
-    display: block;
-} */
 
 .second_seven li a{
     color: var(--black);
@@ -1182,6 +1185,9 @@ button{
 }
 .second_seven > li:last-child{
     border-bottom: none;
+}
+.second_seven li svg{
+    flex-shrink: 0;
 }
 .set_seven{
     margin: 2rem 0.5rem;
@@ -1468,11 +1474,14 @@ button{
     align-items: center;
     gap: 0.5rem;
 }
+.item_f_n span svg{
+    flex-shrink: 0;
+}
 .list_ninth_part svg{
     display: block;
     position: absolute;
-    top: -1rem;
-    right: 45%;
+    left: 50%;
+    bottom: 50%;
 }
 .list_ninth_part > li{
     position: relative;
@@ -1488,6 +1497,7 @@ button{
     padding: 0.5rem;
     bottom: 0;
     width: 100%;
+    
 }
 
 @media screen and (min-width: 780px) {
@@ -1497,6 +1507,7 @@ button{
     }
     .list_ninth_part > li{
         flex: 32%;
+        align-self: flex-start;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -1536,6 +1547,9 @@ button{
 
 .sub_f_c{
     position: relative;
+    display: block;
+}
+.sub_f_c a{
     display: block;
 }
 .set_division{
@@ -1633,6 +1647,7 @@ button{
     position: absolute;
     padding-bottom: 1rem;
     top: -0.8rem;
+    right: 3.2rem;
 }
 .eleventh_part{
     padding: 1.5rem;
@@ -1655,6 +1670,7 @@ button{
     font-size: 1rem;
     display: block;
     align-self: flex-start;
+    font-weight: bold;
 }
 .list_eleventh img{
     width: 100%;
@@ -1694,7 +1710,6 @@ button{
 .list_tw > li{
     border: 1px solid var(--primary_color);
     text-align: center;
-    margin-top: 0.5rem;
     border-radius: 0.3rem;
     padding: 0 0.4rem;
 }
@@ -1710,6 +1725,7 @@ button{
         display: flex;
         flex: 1;
         gap: 1rem;
+        padding-top: 1.5rem;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -1808,11 +1824,11 @@ button{
     }
 }
 
-.sub_second_f > li{
+.sub_second_f > div{
     border-bottom: none !important;
     display: flex;
 }
-.sub_second_f li svg{
+.sub_second_f div svg{
     display: block;
 }
 .sub_second_f{
