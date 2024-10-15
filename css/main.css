@@ -755,13 +755,7 @@ button{
     left: 0;
     background-color: #404040d4;
 }
-.left_event_eleven{
-    position: absolute;
-    top: 35%;
-    padding: 0.1rem 0.4rem;
-    left: 3.25rem;
-    background-color: #404040d4;
-}
+
 .repart_sub_fourth{
     position: relative;
 }
@@ -1468,6 +1462,7 @@ button{
 }
 .list_ninth_part a{
     font-size: 1rem;
+    display: inline-block;
 }
 .item_f_n span{
     display: flex;
@@ -1633,26 +1628,32 @@ button{
 }
 /* ##### eleventh part ##### */
 .pavaraghi{
-    padding: 0.3rem;
+    padding: 0.2rem;
     background-color: var(--black);
-    width: 4rem;
+    min-width: 4rem;
+    display: inline-block;
     text-align: center;
     color: var(--white);
     border-radius: 0.3rem;
-    margin-top: 1rem;
     font-weight: bold;
     font-size: 0.8rem;
 }
 .container_pa{
     position: absolute;
-    padding-bottom: 1rem;
-    top: -0.8rem;
-    right: 3.2rem;
+    top: -2.2rem;
+}
+@media screen and (min-width: 1200px) {
+    .container_pa{
+        right: 1.5rem;
+    }
 }
 .eleventh_part{
     padding: 1.5rem;
     background: linear-gradient(90deg, #085093 0%, #001c37 100%);
     margin-top: 2rem;
+    /* position: relative; */
+}
+.set_position_pa{
     position: relative;
 }
 .list_eleventh{
@@ -1680,6 +1681,39 @@ button{
 .list_eleventh li a:first-child{
     display: block;
 }
+.list_eleventh span{
+    display: none;
+}
+.sign_eleven{
+    position: relative;
+}
+.right_event_eleven{
+    position: absolute;
+    padding: 0.1rem 0.4rem;
+    background-color: #404040d4;
+}
+
+.left_event_eleven{
+    position: absolute;
+    padding: 0.1rem 0.4rem;
+    background-color: #404040d4;
+}
+@media screen and (min-width: 780px){
+    .right_event_eleven{
+        top: 15%;
+    }
+    .left_event_eleven{
+        top: 15%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .right_event_eleven{
+        top: 35%;
+    }
+    .left_event_eleven{
+        top: 35%;
+    }
+}
 @media screen and (min-width: 780px) {
     .list_eleventh{
         flex-direction: row;
@@ -1688,10 +1722,14 @@ button{
         flex:1 20%;
         gap: 0.5rem;
     }
+    .list_eleventh span{
+        display: block;
+    }
 }
 @media screen and (min-width: 1200px) {
     .list_eleventh{
         flex-wrap: nowrap;
+        padding-top: 0.5rem;
     }
 }
 
@@ -1704,7 +1742,7 @@ button{
 .container_h{
     position: absolute;
     top: -1rem;
-    right: 6rem;
+    right: 4rem;
 }
 
 .list_tw > li{
@@ -1716,7 +1754,17 @@ button{
 .list_tw > li > a{
     color: var(--black);
 }
-@media screen and (min-width: 1200px) { 
+.list_tw > li > a{
+    font-size: 0.8rem;
+    font-weight: bold;
+} 
+.list_tw{
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+/* @media screen and (min-width: 200px) { 
     .list_tw > li > a{
         font-size: 0.8rem;
         font-weight: bold;
@@ -1727,14 +1775,19 @@ button{
         gap: 1rem;
         padding-top: 1.5rem;
     }
+} */
+.content_tw{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 3rem;
 }
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 200px) {
     .content_tw{
         display: flex;
         justify-content: center;
         margin: 1rem 5rem;
     }
-}
+} */
 
 /* ###########  footer ########### */
 
@@ -1766,27 +1819,47 @@ button{
 
 .set_s_b{
     background-color: #1d1f27;
-    padding: 0.3rem;
+    padding: 0.3rem 1rem;
 }
-.second_footer > div{
+/* .second_footer > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
-@media screen and (min-width: 780px) {
-    .second_footer > div{
-        padding: 0;
-        flex: 25%;
-        align-items: normal;
-    }
-}
+} */
 .second_footer{
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
+@media screen and (min-width: 620px) {
+    .second_footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .second_footer > div{
+        flex: 45%;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .second_footer{
+        gap: 1rem;
+    }
+    .second_footer > div{
+        padding: 0;
+        flex: 20%;
+        align-items: normal;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .second_footer{
+        gap: 3rem;
+    }
+}
+
 
 .second_footer a{
     color: var(--white);
@@ -1806,13 +1879,6 @@ button{
 }
 .second_footer h4 {
     color: var(--white);
-}
-
-@media screen and (min-width: 780px) {
-    .second_footer{
-        flex-direction: row;
-        gap: 1rem;
-    }
 }
 
 @media screen and (min-width: 780px){
@@ -1841,12 +1907,6 @@ button{
     .sub_second_f{
         flex-direction: row;
         justify-content: space-between;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .second_footer{
-        gap: 3rem;
     }
 }
 
